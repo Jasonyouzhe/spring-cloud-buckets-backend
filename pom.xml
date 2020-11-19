@@ -12,6 +12,7 @@
     </parent>
     <modules>
         <module>spring-cloud-buckets-starter</module>
+        <module>spring-cloud-buckets-eureka</module>
     </modules>
 
     <groupId>com.spring.cloud.buckets.backend</groupId>
@@ -21,8 +22,23 @@
     <description>spring-cloud-buckets-backend</description>
     <properties>
         <java.version>1.8</java.version>
+        <spring.cloud.version>Hoxton.SR5</spring.cloud.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+                <version>2.2.6.RELEASE</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <build>
         <resources>
             <resource>
