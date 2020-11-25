@@ -3,6 +3,9 @@ server:
   port: 8761
 
 eureka:
+  server:
+    #关闭注册中心自我保护机制
+    enableSelfPreservation: false
   instance:
     hostname: localhost
   client:
