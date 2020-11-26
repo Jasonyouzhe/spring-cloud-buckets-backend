@@ -7,7 +7,7 @@ eureka:
     #关闭注册中心自我保护机制
     enableSelfPreservation: false
   instance:
-    hostname: localhost
+    hostname: 192.168.8.148
   client:
     #是否注册自身到eureka服务器
     registerWithEureka: false
@@ -25,3 +25,7 @@ spring:
   application:
     #设置服务名
     name: eurka-server
+#控制监控面板的属性
+hystrix:
+    dashboard:
+      proxy-stream-allow-list: "*"
